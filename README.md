@@ -62,6 +62,9 @@ conn = pymysql.connect(
     charset='utf8mb4')
 
 cursor = conn.cursor()
+cursor.execute("select database();")
+record = cursor.fetchone()
+print("You're connected to database: ", record)
 mydb.commit()
 cursor.close()
 print ("Done")

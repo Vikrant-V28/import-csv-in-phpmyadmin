@@ -1,6 +1,10 @@
+<div align="center">
+  <img height="60" src="https://user-images.githubusercontent.com/85709371/155844936-1206011d-4a78-4277-936d-b1e0fc776161.png">
+</div>
+
 # How to connect to mysql, create a table using python and import the csv file into mysql ?
 
-# System requirements :
+## System requirements :
 Install the pydrive python module as follows :
 
 * pip install mysql-connector-python or pip install PyMySQL (phpMyAdmin)
@@ -9,7 +13,7 @@ Install the pydrive python module as follows :
 The below codes can be run in Jupyter notebook , or any python console
 
 
-# Step 1: Prepare the CSV File
+### Step 1: Prepare the CSV File
 
 To begin, prepare the CSV file that you'd like to import to MySQL. For example, I prepared a simple CSV file with the following data:
 
@@ -17,7 +21,7 @@ To begin, prepare the CSV file that you'd like to import to MySQL. For example, 
 
 Note: the above employee csv data is taken from the below link <a href="https://www.briandunning.com/sample-data/">employee_data</a>
 
-# Step 2: Import the CSV File into the DataFrame.
+### Step 2: Import the CSV File into the DataFrame.
 Next, import the CSV file into Python using the pandas library. Here is the code that I used to import the CSV file, and then create the DataFrame. You'll need to change the path name to reflect the location where the CSV file is stored on your computer
 
 ```python
@@ -25,7 +29,7 @@ import pandas as pd
 empdata = pd.read_csv('C:\\Users\\XXXXX\\emp.csv', index_col=False, delimiter = ',')
 empdata.head()
 ```
-Output of the above code:
+#### Output of the above code:
 
 ![Screenshot (139)](https://user-images.githubusercontent.com/85709371/146893846-aad5d2c4-62cc-41e1-8164-082c296a2e16.png)
 
@@ -36,11 +40,11 @@ data = pd.read_csv('emp.csv')
 df = pd.DataFrame(data)
 print(df)
 ```
-Output of the above code:
+#### Output of the above code:
 
 ![Screenshot (140)](https://user-images.githubusercontent.com/85709371/146894479-69c42b4f-56dc-4af9-89d6-a94f4d23abdc.png)
 
-# Step 3 : Connect to the MySQL using Python and create a Database
+### Step 3 : Connect to the MySQL using Python and create a Database
 Create a connection object to connect to MySQL.
 ```python
 import os
@@ -69,11 +73,11 @@ mydb.commit()
 cursor.close()
 print ("Done")
 ```
-Output of the above code:
+#### Output of the above code:
 
 ![Screenshot (141)](https://user-images.githubusercontent.com/85709371/146895770-405c598f-e98f-47a2-8b85-0db97dfd188d.png)
 
-# Step 4 : Create a table and Import the CSV data into the MySQL table with Timestamp
+### Step 4 : Create a table and Import the CSV data into the MySQL table with Timestamp
 
 ```python
 import os
@@ -114,19 +118,19 @@ print("current time:-", ct)
 ts = ct.timestamp()
 print("timestamp:-", ts)
 ```
-Output of the above code:
+#### Output of the above code:
 
 ![Screenshot (142)](https://user-images.githubusercontent.com/85709371/146897059-8d72b135-49d4-49a0-b012-3aa138f08e08.png)
 
-Output from Database:
+#### Output from Database:
 
 ![Screenshot (137)](https://user-images.githubusercontent.com/85709371/146897154-f94fb37b-1cea-4065-a3b1-52c274fb04fd.png)
 
-# Step 5 : Query the Table
+### Step 5 : Query the Table
 Query the table to make sure that our inserted data has been saved correctly.
 
 
-# Execute query
+## Execute query
 ```python
 sql = "SELECT * FROM csv.employee_data"
 cursor.execute(sql)
@@ -136,6 +140,6 @@ for i in result:
     print(i)
 ```
 
-Output of the Above code:
+#### Output of the Above code:
 
 ![Screenshot (144)](https://user-images.githubusercontent.com/85709371/146897800-1b9b2f3d-be91-40ee-a908-b40818256592.png)

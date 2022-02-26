@@ -1,7 +1,7 @@
 <div align="center">
   <img height="60" src="https://user-images.githubusercontent.com/85709371/155844936-1206011d-4a78-4277-936d-b1e0fc776161.png">
   <img height="60" src="https://user-images.githubusercontent.com/85709371/155844988-b88c879e-dade-408b-8842-a2b6aa2647a6.png">
-  <img height="60" src="(https://user-images.githubusercontent.com/85709371/155845012-4b0b2841-61a3-434b-adac-918b9c683b95.png)">
+  <img height="60" src="https://user-images.githubusercontent.com/85709371/155845012-4b0b2841-61a3-434b-adac-918b9c683b95.png">
 </div>
 
 # How to connect to mysql, create a table using python and import the csv file into mysql ?

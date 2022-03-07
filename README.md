@@ -145,3 +145,6 @@ for i in result:
 #### Output of the Above code:
 
 ![Screenshot (144)](https://user-images.githubusercontent.com/85709371/146897800-1b9b2f3d-be91-40ee-a908-b40818256592.png)
+
+## *Author Name*
+[Vikrant](https://github.com/thevkrant)
